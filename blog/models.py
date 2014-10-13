@@ -12,5 +12,8 @@ class Category(models.Model):
 		ordering = ['title']
 		verbose_name_plural = 'Categories'
 
+	def get_absolute_url(self):
+		return "/categories/%s/" % self.slug
+
 	def __unicode__(self):
 		return self.title
