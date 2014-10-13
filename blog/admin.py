@@ -5,6 +5,7 @@ from djworks.blog.models import Category
 
 
 class CategoryAdmin(admin.ModelAdmin):
-	pass
+	prepopulated_fields = {'slug': ['title']}
+	# the content of slug be from the title field, can be changed if needed!
 
-admin.site.register(Category,CategoryAdmin)
+admin.site.register(Category, CategoryAdmin)
