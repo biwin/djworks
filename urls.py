@@ -16,5 +16,6 @@ urlpatterns = patterns('',
 
     (r'^admin/', include(admin.site.urls)),
 
-    (r'', include('django.contrib.flatpages.urls')),
+    # (r'', include('django.contrib.flatpages.urls')),
+    (r'^blog/$', 'blog.views.entries_index')
 )
