@@ -7,7 +7,7 @@
 <body>
 <h1>Entries Index</h1>
     {% for entry in entry_list %}
-        <h2>{{ entry.titile }}</h2>
+        <h2>{{ entry.title }}</h2>
         <p>Published on {{ entry.pub_date|date:"F j,Y"}}</p>
         {% if entry.excerpt_html %}
             {{ entry.excerpt_html|safe }}
